@@ -14,7 +14,7 @@
 > - Netherrite Breaker
 > - /Features & /Discord (Can be configured in src)
 
-**Test server IP** *Deprecated*
+**Test server IP**
 ~~
 - **IP** FactionsNetwork.com
 - **Backup IP** 142.44.255.130:25590
