@@ -25,19 +25,18 @@ public final class DominosCore extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        
+        final PluginManager plManager = getServer().getPluginManager();
 
-        getServer().getPluginManager().registerEvents(new JoinEvent(), this);
-        getServer().getPluginManager().registerEvents(new NetheriteBreaker(), this);
-        getServer().getPluginManager().registerEvents(new DispenserBreak(), this);
-        getServer().getPluginManager().registerEvents(new ProtectionBlock(), this);
-        getServer().getPluginManager().registerEvents(new MovementFix(), this);
-        getServer().getPluginManager().registerEvents(new EastWest(), this);
-        getServer().getPluginManager().registerEvents(new MagicSand(this), this);
-        getServer().getPluginManager().registerEvents(new ClearStack(), this);
+        plManager.registerEvents(new JoinEvent(), this);
+        plManager.registerEvents(new NetheriteBreaker(), this);
+        plManager.registerEvents(new DispenserBreak(), this);
+        plManager.registerEvents(new ProtectionBlock(), this);
+        plManager.registerEvents(new MovementFix(), this);
+        plManager.registerEvents(new EastWest(), this);
+        plManager.registerEvents(new MagicSand(this), this);
+        plManager.registerEvents(new ClearStack(), this);
 //        getServer().getPluginManager().registerEvents(new Fire(), this);
-
-
-        PluginManager pm = Bukkit.getPluginManager();
 
         getCommand("tntfill").setExecutor(new Tntfill(this));
         getCommand("tf").setExecutor(new Tntfill(this));
